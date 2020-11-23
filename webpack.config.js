@@ -35,10 +35,27 @@ module.exports = {
           'postcss-loader'
         ]
       },
+      {
+        test: /\.(png|jpe?g|gif|ico|svg)$/,
+        use: [
+          'file-loader?name=./img/[name].[ext]',
+          {
+            loader: 'image-webpack-loader',
+            options: {}
+          },
+        ]
+      },
       // {
       //   test: /\.(png|jpe?g|gif|ico|svg)$/,
       //   use: [
-      //     'file-loader?name=./img/[name].[ext]',
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         publicPath: !isDev ? './img' : './src/img',
+      //         outputPath: './img',
+      //         name: '[name].[ext]'
+      //       }
+      //     },
       //     {
       //       loader: 'image-webpack-loader',
       //       options: {}
@@ -46,27 +63,10 @@ module.exports = {
       //   ]
       // },
       {
-        test: /\.(png|jpe?g|gif|ico|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              publicPath: !isDev ? path.resolve(__dirname, 'dist/img') : './src/img',
-              outputPath: './img',
-              name: '[name].[ext]'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {}
-          },
-        ]
-      },
-      {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
         options: {
-          publicPath: !isDev ? path.resolve(__dirname, 'dist/fonts') : './src/vendor/fonts',
+          publicPath: !isDev ? '../fonts' : './src/vendor/fonts',
           outputPath: './fonts',
           name: '[name].[ext]'
         }
