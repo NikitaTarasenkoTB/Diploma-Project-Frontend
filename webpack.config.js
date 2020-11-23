@@ -45,23 +45,6 @@ module.exports = {
           },
         ]
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|ico|svg)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         publicPath: !isDev ? './img' : './src/img',
-      //         outputPath: './img',
-      //         name: '[name].[ext]'
-      //       }
-      //     },
-      //     {
-      //       loader: 'image-webpack-loader',
-      //       options: {}
-      //     },
-      //   ]
-      // },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
@@ -71,10 +54,6 @@ module.exports = {
           name: '[name].[ext]'
         }
       }
-      // {
-      //   test: /\.(eot|ttf|woff|woff2)$/,
-      //   loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
-      // }
     ]
   },
   plugins: [
