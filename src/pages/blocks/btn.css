@@ -1,0 +1,36 @@
+.btn {
+  cursor: pointer;
+  color: inherit;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  width: 168px;
+  height: 64px;
+  background: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  transition: all .3s linear;
+}
+.btn:hover {
+  background: #347EFF;
+}
+.btn.clicked {
+  background: #2A65CC;
+}
+
+.btn_locked {
+  color: #B6BCBF;
+  background: #E6E8EB;
+  box-shadow: none;
+}
+.btn_locked:hover {
+  background: #E6E8EB;
+  cursor: default;
+}
+.btn_locked.clicked {
+  color: #B6BCBF;
+  background: #E6E8EB;
+}

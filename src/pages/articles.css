@@ -1,0 +1,19 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(./blocks/btn.css);
+@import url(./blocks/header.css);
+@import url(./blocks/articles.css);
+@import url(./blocks/info.css);
+@import url(./blocks/footer.css);
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: sans-serif;
+  position: relative;
+}
