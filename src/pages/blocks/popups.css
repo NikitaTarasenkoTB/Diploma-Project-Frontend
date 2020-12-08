@@ -73,15 +73,16 @@
   color: #000000;
   opacity: 0.2;
 }
-.popups__error {
-  position: absolute;
-  top: 37%;
-  left: 8.5%;
+.error {
   font-family: 'Inter';
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #FF0000;
+}
+.popups__error {
+  position: absolute;
+  left: 8.5%;
 }
 .popups__error_exist {
   top: auto;
@@ -118,6 +119,40 @@
 }
 .auth.appear, .login.appear, .thanks.appear {
   opacity: 1;
+}
+.login__email, .login__password, .auth__email, .auth__password, .auth__name, .auth__exist, .login__error {
+  display: none;
+  opacity: 0;
+  transition: all .3s linear;
+}
+.login__email.active, .login__password.active, .login__error.active, .auth__email.active, .auth__password.active, .auth__name.active, .auth__exist.active {
+  display: block;
+}
+.login__email.appear, .login__password.appear, .login__error.appear, .auth__email.appear, .auth__password.appear, .auth__name.appear, .auth__exist.appear {
+  opacity: 1;
+}
+.login__email {
+  top: 37%;
+}
+.login__password {
+  top: 59%;
+}
+.auth__email {
+  top: 30%;
+}
+.auth__password {
+  top: 48%;
+}
+.auth__name {
+  top: 66%;
+}
+.auth__exist {
+  left: 29%;
+  bottom: 28%;
+}
+.login__error {
+  top: 62%;
+  left: 31%;
 }
 
 @media screen and (max-width: 1024px) {

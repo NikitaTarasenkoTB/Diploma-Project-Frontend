@@ -37,6 +37,7 @@
   justify-content: center;
 }
 .articles__card {
+  cursor: pointer;
   position: relative;
   background: white;
   border-radius: 16px;
@@ -149,7 +150,7 @@
   transition: all.3s linear;
   pointer-events: none;
 }
-.articles__label:hover .articles__need-auth, .articles__trash:hover .articles__need-auth {
+.articles__label:hover .articles__need-auth.not-auth, .articles__trash:hover .articles__need-auth {
   opacity: 1;
 }
 .articles__need-auth_trash {
@@ -238,13 +239,19 @@
   margin: 0 auto;
   margin-top: 64px;
 
-  opacity: 1;
+  opacity: 0;
+  display: none;
   transition: all .3s linear;
 }
 .articles__button:hover {
   opacity: 0.9;
 }
-
+.articles__button.active {
+  display: block;
+}
+.articles__button.appear {
+  opacity: 1;
+}
 .articles__loading, .articles__notfound {
   display: flex;
   flex-direction: column;

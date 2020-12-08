@@ -54,6 +54,21 @@
   border: 1px solid #FFFFFF;
   border-radius: 100px;
   margin: 0;
+
+  display: none;
+  opacity: 0;
+  transition: all .3s linear;
+}
+.header__main_articles {
+  display: none;
+  opacity: 0;
+  transition: all .3s linear;
+}
+.header__btn_auth.active, .header__btn_exit.active, .header__main_articles.active {
+  display: inline;
+}
+.header__btn_auth.appear, .header__btn_exit.appear, .header__main_articles.appear {
+  opacity: 1;
 }
 .header_black .header__btn {
   border: 1px solid #1A1B22;
@@ -91,17 +106,19 @@
 }
 .underline {
   border-bottom: 3px solid white;
-  padding-bottom: 5.5%;
+  padding-bottom: 27px;
 }
 .header_black .underline {
   border-bottom: 3px solid #1A1B22;
-  padding-bottom: 5.5%;
 }
 
 @media screen and (max-width: 768px) {
   .header {
     height: 66px;
     padding: 0 40px;
+  }
+  .underline {
+    padding-bottom: 22px;
   }
   .header__main, .header__articles, .header__btn {
     font-size: 16px;

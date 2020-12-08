@@ -63,6 +63,21 @@
   top: 0;
   right: 0;
 }
+.intro__error {
+  display: none;
+  opacity: 0;
+  transition: all .3s linear;
+
+  position: absolute;
+  left: 5%;
+  bottom: 110%;
+}
+.intro__error.active {
+  display: block;
+}
+.intro__error.appear {
+  opacity: 1;
+}
 
 @media screen and (max-width: 1024px) {
   .intro {
